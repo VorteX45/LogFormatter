@@ -1,0 +1,10 @@
+10.03.2025 15:14:49.523 INFORMATION Версия программы: '3.4.0.6'
+2025-03-10 15:14:51.5882| INFO|11|MobileComputer.GetDeviceId| Код устройства: '@MINDEO-6kjhkj45hh'
+10.03.2025 15:14:49.523 DEBUG Версия программы: '3.4.0.48729'
+2025-03-10 25:14:51.6| INFO|11|MobileComputer.GetDeviceId| Код устройства: '@MINDEO-M40-D-410244015546'
+
+10.03.2025 03:14:49.523 INFORMATION Версия программы: '3.4.0.48729'
+2025-03-10 15:14:51.5882| ERROR|4567456745674567|MobileComputer.GetDeviceId| Код устройства: '@MINDEO-cm93-ncm93cm'
+2837456hcdn92837d49827fh2hf6978ff68722f5867
+10.03.2025 15:14:49.523 ERR Версия программы: '3.4.0.5'
+2025-03-10 23:14:51.5882| INFO|asdf3456|MobileComputer.GetDeviceId| Код устройства: '@MINDEO-a8sdf8as8d'

@@ -8,29 +8,27 @@ namespace LogFormatter
 {
     internal class Program
     {
-        // настройки
-        const string outputFilename = "output.txt";
-        const string problemsFilename = "problems.txt";
-
-        const string format1Pattern = @"^\d{2}\.\d{2}\.\d{4}\s\d{2}:\d{2}:\d{2}\.\d*\s" + @"(INFORMATION|WARNING|ERROR|DEBUG)\s" +
-            @"Версия программы:\s.*$";
-        const string format1DateAndTimeFormat = "dd.MM.yyyy HH:mm:ss:fff";
-        static Dictionary<string, string> format1LevelToOutputLevel = new Dictionary<string, string>
-        {
-            { "INFORMATION", "INFO" },
-            { "WARNING", "WARN" },
-            { "DEBUG", "DEBUG" },
-            { "ERROR", "ERROR" }
-        };
-
-        const string format2Pattern = @"^\d{4}-\d{2}-\d{2} \d*:\d{2}:\d{2}\.\d*\| " + @"(INFO|WARN|ERROR|DEBUG)\|" +
-            @"\w*\|" + @"[a-zA-Z0-9\.]*\|" + @" Код устройства: '.*'$";
-
-        const string outputDateAndTimeFormat = "yyyy-MM-dd HH:mm:ss:ffff";
-
-
         static void Main(string[] args)
         {
+            // настройки
+            string outputFilename = AppContext.BaseDirectory + "\\output.txt";
+            string problemsFilename = AppContext.BaseDirectory + "\\problems.txt";
+
+            const string format1Pattern = @"^\d{2}\.\d{2}\.\d{4}\s\d{2}:\d{2}:\d{2}\.\d*\s" + @"(INFORMATION|WARNING|ERROR|DEBUG)\s" +
+                @"Версия программы:\s.*$";
+            const string format1DateAndTimeFormat = "dd.MM.yyyy HH:mm:ss.fff";
+            Dictionary<string, string> format1LevelToOutputLevel = new Dictionary<string, string>
+            {
+                { "INFORMATION", "INFO" },
+                { "WARNING", "WARN" },
+                { "DEBUG", "DEBUG" },
+                { "ERROR", "ERROR" }
+            };
+
+            const string format2Pattern = @"^\d{4}-\d{2}-\d{2} \d*:\d{2}:\d{2}\.\d*\| " + @"(INFO|WARN|ERROR|DEBUG)\|" +
+                @"\w*\|" + @"[a-zA-Z0-9\.]*\|" + @" Код устройства: '.*'$";
+
+            const string outputDateAndTimeFormat = "yyyy-MM-dd HH:mm:ss.ffff";
             string filePath;
             Regex format1Regex = new Regex(format1Pattern, RegexOptions.Compiled);
             Regex format2Regex = new Regex(format2Pattern, RegexOptions.Compiled);
